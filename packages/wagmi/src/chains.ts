@@ -1,16 +1,6 @@
-import {
-  arbitrumRinkeby,
-  optimismKovan,
-  polygonMumbai,
-  rinkeby,
-  mainnet,
-  arbitrum,
-  optimism,
-  polygon,
-} from 'wagmi/chains'
-import { Chain } from 'wagmi'
+import { IChain } from './types'
 
-export const avalandche: Chain = {
+export const avalandche: IChain = {
   id: 43114,
   name: 'Avalanche C-Chain',
   network: 'avalanche',
@@ -26,7 +16,7 @@ export const avalandche: Chain = {
   },
 }
 
-export const avalandcheFuji: Chain = {
+export const avalandcheFuji: IChain = {
   id: 43113,
   name: 'Avalanche Fuji',
   network: 'avalanche-fuji',
@@ -43,7 +33,7 @@ export const avalandcheFuji: Chain = {
   testnet: true,
 }
 
-export const fantomOpera: Chain = {
+export const fantomOpera: IChain = {
   id: 250,
   name: 'Fantom Opera',
   network: 'fantom',
@@ -59,7 +49,7 @@ export const fantomOpera: Chain = {
   },
 }
 
-export const fantomTestnet: Chain = {
+export const fantomTestnet: IChain = {
   id: 4002,
   name: 'Fantom Testnet',
   network: 'fantom-testnet',
@@ -78,7 +68,7 @@ export const fantomTestnet: Chain = {
 
 const bscExplorer = { name: 'BscScan', url: 'https://bscscan.com' }
 
-export const bsc: Chain = {
+export const bsc: IChain = {
   id: 56,
   name: 'BNB Smart Chain',
   network: 'bsc',
@@ -101,7 +91,7 @@ export const bsc: Chain = {
   },
 }
 
-export const bscTest: Chain = {
+export const bscTest: IChain = {
   id: 97,
   name: 'BNB Smart Chain Testnet',
   network: 'bsc-testnet',
@@ -124,23 +114,8 @@ export const bscTest: Chain = {
   testnet: true,
 }
 
-export const CHAINS_TESTNET = [
-  bscTest,
-  rinkeby,
-  arbitrumRinkeby,
-  optimismKovan,
-  polygonMumbai,
-  avalandcheFuji,
-  fantomTestnet,
-]
+export const CHAINS_TESTNET = [bscTest, avalandcheFuji, fantomTestnet]
 
-export const CHAINS_STARGATE_TESTNET = [
-  rinkeby,
-  arbitrumRinkeby,
-  optimismKovan,
-  polygonMumbai,
-  avalandcheFuji,
-  fantomTestnet,
-]
+export const CHAINS_STARGATE_TESTNET = [avalandcheFuji, fantomTestnet]
 
-export const CHAINS = [bsc, mainnet, arbitrum, optimism, polygon, fantomOpera, avalandche]
+export const CHAINS = [bsc, fantomOpera, avalandche]
